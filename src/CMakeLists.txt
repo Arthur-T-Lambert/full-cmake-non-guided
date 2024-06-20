@@ -1,1 +1,1 @@
-add_library(tools factorial.cpp)
+add_library(tools factorial.cpp palindrome.cpp)
