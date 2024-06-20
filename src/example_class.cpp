@@ -12,5 +12,5 @@ int ExampleClass::getVal() const {
 }
 
 void ExampleClass::setVal(int val) {
-    val_ = val
+    val_ = val;
 }

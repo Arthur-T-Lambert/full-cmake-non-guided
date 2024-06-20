@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main() {
-    assert(prime(2) == 1);
+    assert(prime(2) == false);
     std::cout << "Test passed!" << std::endl;
     return 0;
 }

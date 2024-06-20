@@ -5,6 +5,6 @@
 
 #include "palindrome.h"
 
-int palindrome(char* str, int len) {
+int palindrome(const char* str, int len) {
     return false;
 }
