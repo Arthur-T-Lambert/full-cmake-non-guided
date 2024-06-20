@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - develop
   pull_request:
     branches:
       - main
+      - develop
 
 
 jobs:
@@ -32,11 +34,11 @@ jobs:
         run: ctest --test-dir build --output-on-failure
 
       - name: Generate docs
-        if: ${{ success() }}
+        if: ${{ success() }} && github.ref == 'refs/heads/main'
         run: cmake --build build --target doc_doxygen
 
       - name: Push generated docs to repository
-        if: ${{ success() }}
+        if: ${{ success() }} && github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
